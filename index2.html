@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>_Hideris - 프로게이머 & 스트리머</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;600;700&display=swap');
+        
+        .modern-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .accent-gradient {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+        }
+        
+        .subtle-shadow {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .card-shadow {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        .typing-animation {
+            border-right: 2px solid #4f46e5;
+            animation: typing 3s steps(30) infinite, blink 1s infinite;
+        }
+        
+        @keyframes typing {
+            0%, 50% { width: 0; }
+            100% { width: 100%; }
+        }
+        
+        @keyframes blink {
+            0%, 50% { border-color: transparent; }
+            51%, 100% { border-color: #4f46e5; }
+        }
+        
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-['Inter'] overflow-x-hidden">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-['Poppins'] font-bold text-gray-900">_Hideris</h1>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#streaming" class="text-gray-600 hover:text-indigo-600 transition-all duration-300 font-medium">스트리밍</a>
+                <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition-all duration-300 font-medium">연락처</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 px-6 text-center bg-gradient-to-br from-gray-50 to-white">
+        <div class="container mx-auto relative z-10">
+            <div class="mb-8 float-animation">
+                <div class="w-24 h-24 mx-auto bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl flex items-center justify-center text-4xl font-bold shadow-lg">
+                    🎮
+                </div>
+            </div>
+            <h2 class="text-5xl md:text-7xl font-['Poppins'] font-bold mb-6 text-gradient">
+                _Hideris
+            </h2>
+            <div class="text-lg md:text-xl mb-10 h-6 overflow-hidden">
+                <p class="typing-animation whitespace-nowrap text-gray-600">일러스트레이터 & 스트리머</p>
+            </div>
+            <button onclick="showChzzkAlert()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all transform hover:scale-105 shadow-lg hover:shadow-xl">
+                🔴 라이브 스트림 보기
+            </button>
+        </div>
+    </section>
+
+
+
+    <!-- Streaming Section -->
+    <section id="streaming" class="py-16 px-6 bg-gray-50">
+        <div class="container mx-auto text-center">
+            <h3 class="text-4xl font-['Poppins'] font-bold mb-12 text-gray-900">스트리밍</h3>
+            <div class="bg-white p-12 rounded-2xl max-w-4xl mx-auto card-shadow border border-gray-100">
+                <div class="text-5xl mb-6">🎮</div>
+                <h4 class="text-2xl font-bold mb-6 text-gray-900">라이브 스트리밍</h4>
+                <p class="text-lg mb-8 text-gray-600">
+                    치지직에서 _Hideris의 라이브 스트림을 시청하세요!
+                </p>
+                <button onclick="showChzzkAlert()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition-all transform hover:scale-105 shadow-lg">
+                    🔴 라이브 스트림 보기
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-6 bg-white">
+        <div class="container mx-auto text-center">
+            <h3 class="text-4xl font-['Poppins'] font-bold mb-12 text-gray-900">연락처</h3>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="bg-white p-8 rounded-2xl card-shadow border border-gray-100 card-hover">
+                    <h4 class="text-xl font-semibold mb-6 text-gray-900">소셜 미디어</h4>
+                    <div class="space-y-4">
+                        <button onclick="showChzzkAlert()" class="w-full bg-green-600 hover:bg-green-700 text-white p-4 rounded-xl transition-all duration-300 font-medium shadow-sm">
+                            📺 치지직에서 팔로우
+                        </button>
+                        <button onclick="showXAlert()" class="w-full bg-gray-900 hover:bg-gray-800 text-white p-4 rounded-xl transition-all duration-300 font-medium shadow-sm">
+                            🐦 X에서 팔로우
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl card-shadow border border-gray-100 card-hover">
+                    <h4 class="text-xl font-semibold mb-6 text-gray-900">협업 문의</h4>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        스폰서십, 팀 제안, 또는 기타 협업 관련 문의사항이 있으시면 연락해 주세요.
+                    </p>
+                    <button onclick="showXAlert()" class="w-full bg-indigo-600 hover:bg-indigo-700 text-white p-4 rounded-xl transition-all duration-300 font-medium shadow-sm">
+                        📧 비즈니스 문의
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-8 px-6 text-center">
+        <div class="container mx-auto">
+            <p class="text-xl font-['Poppins'] font-semibold mb-2 text-white">_Hideris</p>
+            <p class="text-gray-400">© 2025 Hideris 히데쨩</p>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        function showStreamAlert() {
+            alert('🔴 스트림 알림이 설정되었습니다! 라이브 방송 시작 시 알림을 받으실 수 있습니다.');
+        }
+
+        function showSocialAlert(platform) {
+            alert(`${platform}에서 _Hideris을 팔로우해 주세요! 최신 소식과 하이라이트를 확인하실 수 있습니다.`);
+        }
+
+        function showChzzkAlert() {
+            const popup = window.open('', 'chzzkPopup', 'width=500,height=300,scrollbars=yes,resizable=yes');
+            popup.document.write(`
+                <html>
+                <head>
+                    <title>치지직 스트림</title>
+                    <style>
+                        body { 
+                            font-family: 'Inter', sans-serif; 
+                            padding: 30px; 
+                            background: #f8fafc; 
+                            color: #1f2937; 
+                            text-align: center;
+                        }
+                        .contact-info {
+                            background: #ffffff;
+                            padding: 30px;
+                            border-radius: 16px;
+                            margin: 20px 0;
+                            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+                            border: 1px solid #e5e7eb;
+                        }
+                        .chzzk-link {
+                            color: #059669;
+                            text-decoration: none;
+                            font-size: 16px;
+                            word-break: break-all;
+                            font-weight: 500;
+                        }
+                        .chzzk-link:hover {
+                            color: #047857;
+                        }
+                        .close-btn {
+                            background: #059669;
+                            color: white;
+                            border: none;
+                            padding: 12px 24px;
+                            border-radius: 12px;
+                            cursor: pointer;
+                            margin-top: 20px;
+                            font-weight: 500;
+                            transition: all 0.2s;
+                        }
+                        .close-btn:hover {
+                            background: #047857;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h2 style="color: #1f2937; margin-bottom: 20px;">📺 치지직 라이브 스트림</h2>
+                    <div class="contact-info">
+                        <p style="margin-bottom: 20px; color: #6b7280;">_Hideris의 라이브 스트림을<br>치지직에서 시청하세요!</p>
+                        <a href="https://chzzk.naver.com/fc29bd30854def7deb1ae8bd38f64dee" target="_blank" class="chzzk-link">
+                            https://chzzk.naver.com/fc29bd30854def7deb1ae8bd38f64dee
+                        </a>
+                    </div>
+                    <button class="close-btn" onclick="window.close()">창 닫기</button>
+                </body>
+                </html>
+            `);
+        }
+
+        function showXAlert() {
+            const popup = window.open('', 'xPopup', 'width=500,height=300,scrollbars=yes,resizable=yes');
+            popup.document.write(`
+                <html>
+                <head>
+                    <title>X 팔로우하기</title>
+                    <style>
+                        body { 
+                            font-family: 'Inter', sans-serif; 
+                            padding: 30px; 
+                            background: #f8fafc; 
+                            color: #1f2937; 
+                            text-align: center;
+                        }
+                        .contact-info {
+                            background: #ffffff;
+                            padding: 30px;
+                            border-radius: 16px;
+                            margin: 20px 0;
+                            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+                            border: 1px solid #e5e7eb;
+                        }
+                        .x-link {
+                            color: #1d4ed8;
+                            text-decoration: none;
+                            font-size: 16px;
+                            word-break: break-all;
+                            font-weight: 500;
+                        }
+                        .x-link:hover {
+                            color: #1e40af;
+                        }
+                        .close-btn {
+                            background: #1d4ed8;
+                            color: white;
+                            border: none;
+                            padding: 12px 24px;
+                            border-radius: 12px;
+                            cursor: pointer;
+                            margin-top: 20px;
+                            font-weight: 500;
+                            transition: all 0.2s;
+                        }
+                        .close-btn:hover {
+                            background: #1e40af;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h2 style="color: #1f2937; margin-bottom: 20px;">🐦 X에서 팔로우하기</h2>
+                    <div class="contact-info">
+                        <p style="margin-bottom: 20px; color: #6b7280;">_Hideris의 최신 소식과 하이라이트를<br>X에서 확인해보세요!</p>
+                        <a href="https://x.com/Hideris1027" target="_blank" class="x-link">
+                            https://x.com/Hideris1027
+                        </a>
+                    </div>
+                    <button class="close-btn" onclick="window.close()">창 닫기</button>
+                </body>
+                </html>
+            `);
+        }
+
+        function showContactAlert() {
+            const popup = window.open('', 'contactPopup', 'width=500,height=300,scrollbars=yes,resizable=yes');
+            popup.document.write(`
+                <html>
+                <head>
+                    <title>비즈니스 문의</title>
+                    <style>
+                        body { 
+                            font-family: 'Inter', sans-serif; 
+                            padding: 30px; 
+                            background: #f8fafc; 
+                            color: #1f2937; 
+                            text-align: center;
+                        }
+                        .contact-info {
+                            background: #ffffff;
+                            padding: 30px;
+                            border-radius: 16px;
+                            margin: 20px 0;
+                            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+                            border: 1px solid #e5e7eb;
+                        }
+                        .x-link {
+                            color: #1d4ed8;
+                            text-decoration: none;
+                            font-size: 16px;
+                            word-break: break-all;
+                            font-weight: 500;
+                        }
+                        .x-link:hover {
+                            color: #1e40af;
+                        }
+                        .close-btn {
+                            background: #dc2626;
+                            color: white;
+                            border: none;
+                            padding: 12px 24px;
+                            border-radius: 12px;
+                            cursor: pointer;
+                            margin-top: 20px;
+                            font-weight: 500;
+                            transition: all 0.2s;
+                        }
+                        .close-btn:hover {
+                            background: #b91c1c;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h2 style="color: #1f2937; margin-bottom: 20px;">📧 비즈니스 문의</h2>
+                    <div class="contact-info">
+                        <p style="margin-bottom: 20px; color: #6b7280;">스폰서십, 팀 제안, 협업 관련 문의는<br>아래 X(트위터) 계정으로 연락해 주세요!</p>
+                        <a href="https://x.com/Hideris1027" target="_blank" class="x-link">
+                            https://x.com/Hideris1027
+                        </a>
+                    </div>
+                    <button class="close-btn" onclick="window.close()">창 닫기</button>
+                </body>
+                </html>
+            `);
+        }
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'976d1ddc73fbd1f1',t:'MTc1NjQ4MTcwOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
